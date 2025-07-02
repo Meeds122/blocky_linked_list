@@ -11,6 +11,7 @@ typedef struct List List;
 // ----------------
 
 List initList(); // Returns a new List structure.
+
 bool destroyList(List *list); // Destroys a List. Returns true if successful and false if not. 
 
 bool appendElement(List *list, Element element); // Appends the element to the list. Returns true if successful and false if not. 

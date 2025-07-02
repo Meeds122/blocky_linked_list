@@ -35,6 +35,14 @@ Element getElement(List *list, int element_id){
 // Private interface code
 // ----------------------
 
+bool createBlock(List *list){
+
+} // Add a new, empty Block structure in the heap and to the list.
+
+bool deleteBlock(List *list, int block_number){
+    
+} // Deletes a block identified by block_number. Assumes block identified is last block. 
+
 bool isBlockRequired(List *list){
     int free_elements = (list->blocks * BLOCKSIZE) - list->length; // free_elements = total_elements - consumed_consumed elements
     if(free_elements > 0){

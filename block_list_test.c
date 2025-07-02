@@ -85,5 +85,11 @@ int main(){
     else
         printf("[FAIL] isBlockRequired()\n");    
     
+    
+    printf("[EXPLORATION]\n");
+    printf("Size of List: %ld\n", sizeof(List));
+    printf("Size of Element: %ld\n", sizeof(Element));
+    printf("Size of Block: %ld\n", sizeof(Block));
+
     return 0;
 }
