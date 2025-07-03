@@ -1,6 +1,7 @@
 #include <stdbool.h>
 
 #define BLOCKSIZE 1000
+#define ELEMENT_TYPE int
 
 typedef struct Element Element;
 typedef struct Block Block;
@@ -23,8 +24,8 @@ Element getElement(List *list, int element_id); // Returns an Element of the Ele
 // Private Interface
 // -----------------
 
-bool createBlock(List *list); // Add a new, empty Block structure in the heap and to the list.
-bool deleteBlock(List *list, int block_number); // Deletes a block identified by block_number. Assumes block identified is last block. 
+Block *createBlock(); // Add a new, empty Block structure in the heap and returns the pointer to the new Block. 
+bool deleteBlock(Block *block); // Frees the memory pointed to by block. Returns true if succesful or false if error. 
 bool isBlockRequired(List *list); // Returns true if the last block is full. 
 
 // ----------
@@ -32,7 +33,7 @@ bool isBlockRequired(List *list); // Returns true if the last block is full.
 // ----------
 
 struct Element{
-    int value;
+    ELEMENT_TYPE value;
 };
 
 struct Block{
