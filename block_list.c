@@ -36,11 +36,12 @@ Element getElement(List *list, int element_id){
 // ----------------------
 
 Block *createBlock(){
-
+    Block *block = malloc(sizeof(Block));
+    return block;
 } // Add a new, empty Block structure in the heap and returns the pointer to it. 
 
 bool deleteBlock(Block *block){
-    
+
 } // Frees the memory pointed to by block. Returns true if succesful or false if error. 
 
 bool isBlockRequired(List *list){

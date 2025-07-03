@@ -1,6 +1,6 @@
 #include <stdbool.h>
 
-#define BLOCKSIZE 1000
+#define BLOCKSIZE 1024
 #define ELEMENT_TYPE int
 
 typedef struct Element Element;

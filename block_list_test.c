@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 #include "block_list.h"
 
@@ -63,6 +64,17 @@ bool testIsBlockRequired(){
     return true;
 }
 
+bool testCreateBlock(){
+    Block *b = createBlock();
+    if (b == NULL){
+        return false;
+    }
+    else{
+        free(b);
+        return true;
+    }
+}
+
 int main(){
     
     printf("[INFO] Testing Public Interfaces\n");
@@ -84,7 +96,11 @@ int main(){
         printf("[ OK ] isBlockRequired()\n");
     else
         printf("[FAIL] isBlockRequired()\n");    
-    
+
+    if(testCreateBlock())
+        printf("[ OK ] createBlock()\n");
+    else
+        printf("[FAIL] createBlock()\n"); 
     
     printf("[EXPLORATION]\n");
     printf("Size of List: %ld\n", sizeof(List));
